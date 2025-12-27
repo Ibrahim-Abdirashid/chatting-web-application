@@ -57,7 +57,7 @@ const Footer = () => {
             </a>
 
             <a
-              href="https://twitter.com/USERNAME"
+              href="https://instagram.com/abraham_abdirashid"
               target="_blank"
               rel="noopener noreferrer"
             >

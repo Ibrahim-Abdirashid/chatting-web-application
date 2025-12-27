@@ -7,9 +7,10 @@ const NavBar = () => {
     <div className="shadow-sm">
     <div className="max-w-6xl mx-auto flex justify-between items-center">
       {/* loogadii weye halkan */}
-      <div className="w-20 cursor-pointer">
-        <Link to="/">
-          <img src="/logo.png" alt="" />
+      <div className=" cursor-pointer ">
+        <Link to="/" className="flex items-center gap-2">
+          <img src="/logo.png" alt="" className="w-24" />
+          <p className="">Abraham's Chatt</p>
         </Link>
       </div>
 

@@ -1,0 +1,12 @@
+[
+    {
+        "name" : "Real Chat Application",
+        "description" : "This real-time chat web application is designed to provide fast, reliable, and seamless communication between users. It allows users to send and receive messages instantly, ensuring smooth conversations without delays. The platform supports secure messaging, making it suitable for personal, academic, or professional communication. With a simple and user-friendly interface, users can easily connect, interact, and stay engaged in real time from any location",
+        "img" : "./family.png"
+    },
+    {
+        "name" : " Connect Friends and Family",
+        "description" : "This feature helps users stay connected with friends and family through real-time messaging. It allows easy and instant communication, making it simple to share updates, thoughts, and moments as they happen. No matter the distance, users can maintain strong relationships and enjoy meaningful conversations anytime, anywhere.",
+        "img" :  "./friends.png"
+    }
+]

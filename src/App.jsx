@@ -9,10 +9,12 @@ import SomeChat from './Pages/SomeChat'
 import NotFound from './Pages/NotFound'
 import NavBar from './components/Home/NavBar'
 import Footer from './components/Home/Footer'
+import Snowfall from 'react-snowfall'
 
 const App = () => {
   return (
     <>
+    <Snowfall color='green' />
     <NavBar />  
     <Routes>
       {/* pages */}

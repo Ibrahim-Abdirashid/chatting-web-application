@@ -5,3 +5,8 @@
 body{
     font-family: poppins, sans-serif;
 }
+
+
+html {
+  scroll-behavior: smooth;
+}

@@ -4,13 +4,15 @@ import { Link } from "react-router-dom";
 const NavBar = () => {
   const currenUser = false;
   return (
-    <div className="shadow-sm">
-    <div className="max-w-6xl mx-auto flex justify-between items-center">
+    <div className="shadow-sm ">
+    <div className="fixed top-0 right-0 left-0 max-w-6xl mx-auto flex justify-between items-center">
       {/* loogadii weye halkan */}
       <div className=" cursor-pointer ">
         <Link to="/" className="flex items-center gap-2">
           <img src="/logo.png" alt="" className="w-24" />
-          <p className="">Abraham's Chatt</p>
+          <p className="" onClick={() => {
+            document.getElementById('home').scrollIntoView({ behavior: 'smooth' });
+          }}>Abraham's Chatt</p>
         </Link>
       </div>
 
@@ -22,7 +24,9 @@ const NavBar = () => {
           </li>
         )}
         <li>
-          <Link to="/about">About</Link>
+          <Link to="/#about" onClick={() => {
+            document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
+          }}>About</Link>
         </li>
         <li>
           <Link to="/contact">Contact</Link>

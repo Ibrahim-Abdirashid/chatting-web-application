@@ -29,7 +29,9 @@ const NavBar = () => {
           }}>About</Link>
         </li>
         <li>
-          <Link to="/contact">Contact</Link>
+          <Link to="/#contact" onClick={() => {
+            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+          }}>Contact</Link>
         </li>
       </ul>
 

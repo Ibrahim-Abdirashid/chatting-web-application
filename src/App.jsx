@@ -9,13 +9,12 @@ import SomeChat from './Pages/SomeChat'
 import NotFound from './Pages/NotFound'
 import NavBar from './components/Home/NavBar'
 import Footer from './components/Home/Footer'
-import Snowfall from 'react-snowfall'
 
 const App = () => {
   return (
     <>
-    <Snowfall color='green' />
-    <NavBar />  
+    
+      
     <Routes>
       {/* pages */}
       <Route path='/' element={<Home />} />
@@ -28,11 +27,11 @@ const App = () => {
       <Route path='/login' element={<Login />} />
 
       {/* sometask */}
-      <Route path='/somechat' element={<SomeChat />} />
+      <Route path='/SomeChat' element={<SomeChat />} />
        {/* notfound page */}
        <Route path='*' element={<NotFound />} />
     </Routes>
-    <Footer/>
+    
     </>
   )
 }

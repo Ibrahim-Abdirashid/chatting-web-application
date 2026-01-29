@@ -1,55 +1,75 @@
-import React, { useState } from 'react'
-import { Link, useNavigate } from 'react-router'
+import React from "react";
+import { useForm } from "react-hook-form";
+import NavBar from "../components/Home/NavBar";
+import Footer from "../components/Home/Footer";
+import { useNavigate, Link } from "react-router-dom";
 
 const Login = () => {
-
-  const [email , setEmail] = useState('')
-  const [password , setPassword] = useState("")
-  const [error , setError] = useState(null);
-
   const navigate = useNavigate();
 
-  const handleSignUp = async (e) => {
-    e.preventDefault();
+  // React Hook Form: Uma baahnid useState-ka email iyo password
+  const {
+    register,
+    handleSubmit,
+  } = useForm();
 
-    try {
-      navigate('/login');
-      window.location.reload(); 
-      
-    } catch (error) {
-      setError(error);
-      
-    }
+  // Data waxay ka kooban tahay { email, password }
+  const onSubmit = () => {
+    navigate('/SomeChat');
+  };
 
-  }
   return (
-    <div className="py-28 max-w-6xl mx-auto h-screen flex flex-col justify-center items-center gap-10 ">
-      <div className=''>
-        <form onSubmit={handleSignUp} className='flex flex-col gap-10 p-10 border border-green-500 rounded-md shadow-md'>
-          <h3 className='text-center font-bold text-green-500 text-xl'>login user</h3>
-          <input type="text" 
-           placeholder="Enter your email"
-           value={email}
-           onChange={(e) => setEmail(e.target.value)}
-           className='border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-green-500'
-           />
-          <input type="password" 
-           placeholder="password"
-           value={password}
-           onChange={(e) => setPassword(e.target.value)}
-           className='border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-green-500'
-           />
+    <>
 
-           {
-             error && <p className="text-red-500">{error}</p>
+    <NavBar />
+    
+    <div className="py-28 max-w-6xl mx-auto h-screen flex flex-col justify-center items-center gap-10">
+      <form
+        onSubmit={handleSubmit(onSubmit)}
+        className="flex flex-col gap-6 p-10 border border-green-500 rounded-md shadow-md min-w-[350px]"
+      >
+        <h3 className="text-center font-bold text-green-500 text-xl uppercase">
+          Login User
+        </h3>
 
-           }
-           <button type="submit"  className="bg-green-500 text-white px-4 py-2 rounded-md">login</button>
-        </form>
-        <p>Don't have an account? <Link to="/signup" className="text-green-500">Create an Account</Link></p>
-      </div>
+        {/* Email Input */}
+        <div className="flex flex-col gap-1">
+          <input
+            type="text"
+            placeholder="Enter your email"
+            className="border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-green-500"
+            {...register("email")}
+          />
+        </div>
+
+        {/* Password Input */}
+        <div className="flex flex-col gap-1">
+          <input
+            type="password"
+            placeholder="Password"
+            className="border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-green-500"
+            {...register("password")}
+          />
+        </div>
+
+        <button
+          type="submit"
+          className="bg-green-500 hover:bg-green-600 text-white font-bold px-4 py-2 rounded-md transition-colors"
+        >
+          Login
+        </button>
+
+        <p className="text-center">
+          Don't have an account?{" "}
+          <Link to="/signup" className="text-green-500 hover:underline">
+            Create an Account
+          </Link>
+        </p>
+      </form>
     </div>
-  )
-}
+    <Footer/>
+    </>
+  );
+};
 
-export default Login
+export default Login;

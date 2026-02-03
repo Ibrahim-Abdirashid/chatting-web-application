@@ -4,7 +4,7 @@ import Input from './Input'
 
 const Chat = () => {
   return (
-    <div className='  flex-[2]'>
+    <div className='flex-[2] flex flex-col h-full'>
       <div className='h-20 text-white bg-[#11212b] px-4 flex justify-between items-center'>
         <span className='font-medium'>Ayub Dhexyar </span>
         <div className='flex items-center gap-4'>

@@ -6,7 +6,7 @@ import Friends from './Friends'
 
 const Sidebar = () => {
   return (
-    <div className=' flex-1 bg-[#028a7e] min-h-screen relative'>
+    <div className=' flex-1 bg-[#028a7e] h-full relative'>
       <Header />
       <SearchFriends />
       <Friends />

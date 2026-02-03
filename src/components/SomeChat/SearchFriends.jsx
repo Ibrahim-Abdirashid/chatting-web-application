@@ -24,14 +24,14 @@ const SearchFriends = () => {
   return (
     <div className="">
       <div className="border-b border-[#02a093] py-2 px-3 flex justify-between">
-        <input
-          type="text"
+          <input
+            type="text"
           placeholder="Search Friend"
           className="outline-none text-white bg-transparent placeholder-gray-200 text-sm"
-          value={userName}
-          onKeyDown={handleKeyDown}
+            value={userName}
+            onKeyDown={handleKeyDown}
           onChange={(e) => setUserName(e.target.value)}
-        />
+          />
       </div>
 
       {error && (
